@@ -3,16 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>test</title>
-    <link rel="stylesheet" href="style.css">
+    <title>文字輸入網頁</title>
+    <style>
+        body {
+            font-family: sans-serif;
+        }
+        .container {
+            width: 80%;
+            margin: 20px auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 3px;
+            box-sizing: border-box;
+        }
+        #output {
+            padding: 10px;
+            border: 1px solid #eee;
+            border-radius: 3px;
+            background-color: #f9f9f9;
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <h1>郭翻開是Gay！</h1>
-        <p>這是個通知</p>
-    </header>
-    <footer>
-        <p>bruh</p>
-    </footer>
+    <div class="container">
+        <h1>輸入文字</h1>
+        <textarea id="inputText" rows="5" placeholder="請在這裡輸入文字"></textarea>
+        <div>
+            <button onclick="updateOutput()">顯示文字</button>
+        </div>
+        <h2>您輸入的文字：</h2>
+        <div id="output"></div>
+    </div>
+
+    <script>
+        function updateOutput() {
+            const inputText = document.getElementById("inputText").value;
+            document.getElementById("output").textContent = inputText;
+        }
+    </script>
 </body>
 </html>
