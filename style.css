@@ -18,3 +18,36 @@ footer {
     bottom: 0;
     width: 100%;
 }
+body {
+  background-color: #f0f4f8;
+  font-family: 'Segoe UI', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.card {
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  max-width: 300px;
+  text-align: center;
+}
+
+.card img {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+}
+
+.card h2 {
+  color: #333;
+  margin: 15px 0 10px;
+}
+
+.card p {
+  color: #666;
+  font-size: 16px;
+}
